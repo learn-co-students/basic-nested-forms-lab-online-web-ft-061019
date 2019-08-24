@@ -9,9 +9,11 @@ class RecipesController < ApplicationController
 
   def new
     @recipe = Recipe.new
+    @recipe.build(:name, :quantity)
     child_resource: :name, :quantity
   end
 
   def create
   end
+end
 end
